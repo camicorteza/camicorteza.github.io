@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Camila Cortés, Desarrolladora Web Full Stack</title>
+<meta name="description" content="Portafolio de Camila Cortés: desarrollo web full stack y diseño gráfico. Talca, Chile.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232F6B4F'/><text x='16' y='23' font-size='18' text-anchor='middle' fill='%23F2A65A' font-family='Georgia'>C</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF6F0;--s:#F1EADF;--t:#1F2A24;--m:#58665D;--g:#2F6B4F;--a:#B8611A;--on:#fff;--b:#DDD3C2}
+[data-theme=dark]{--bg:#121412;--s:#1A1E1B;--t:#ECE8E1;--m:#9AA59C;--g:#5BB38A;--a:#F2A65A;--on:#121412;--b:#2B312C}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--t);font:17px/1.65 Figtree,system-ui,sans-serif;transition:background .3s,color .3s}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--a);outline-offset:3px;border-radius:4px}
+.w{max-width:1040px;margin:auto;padding:0 24px}
+h1,h2,h3,dt{font-family:Fraunces,Georgia,serif;font-weight:700;line-height:1.15}
+header{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--b)}
+nav{display:flex;align-items:center;gap:20px;height:64px}
+.logo{font:700 20px Fraunces,serif;text-decoration:none;margin-right:auto}
+nav a.l{font-size:15px;color:var(--m);text-decoration:none;font-weight:500}
+nav a.l:hover{color:var(--g)}
+.ic{background:none;border:1px solid var(--b);color:var(--t);border-radius:999px;height:36px;min-width:36px;padding:0 12px;font:600 13px Figtree,sans-serif;cursor:pointer}
+.ic:hover{border-color:var(--g)}
+section{padding:88px 0}
+h2{font-size:clamp(28px,4vw,40px);margin-bottom:32px}
+.hero{display:grid;grid-template-columns:1.5fr 1fr;gap:56px;align-items:center;padding:72px 0 88px}
+.hero h1{font-size:clamp(46px,8vw,88px);font-weight:700;letter-spacing:-.02em;margin-bottom:20px}
+.hero p.s{color:var(--m);font-size:19px;max-width:520px;margin-bottom:28px}
+.tag{display:inline-block;margin-bottom:18px;padding:5px 14px;border:1px solid var(--g);color:var(--g);border-radius:999px;font-size:14px;font-weight:500}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 24px;border-radius:999px;font-weight:700;text-decoration:none;font-size:15px;border:1.5px solid var(--b);transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--a);border-color:var(--a);color:var(--on)}
+.ph{position:relative;aspect-ratio:4/5;border-radius:999px 999px 24px 24px;background:var(--g);display:grid;place-items:center;font:700 64px Fraunces,serif;color:var(--on);margin:0 0 0 14px}
+.ph::before{content:"";position:absolute;inset:14px -14px -14px 14px;border-radius:inherit;background:var(--a);z-index:-1}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit}
+.abt{display:grid;grid-template-columns:1.2fr 1fr;gap:56px}
+.abt p{color:var(--m);margin-bottom:14px}
+.sk{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}
+.sk li{display:flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid var(--b);border-radius:8px;font-size:15px;font-weight:500}
+.sk img{width:20px;height:20px}
+[data-theme=dark] .sk img[src*="/express/"],[data-theme=dark] .sk img[src*="/github/"]{filter:invert(1)}
+.pr{display:grid;grid-template-columns:5fr 6fr;gap:36px;padding:40px 0;border-top:1px solid var(--b)}
+.shot{position:relative;aspect-ratio:16/10;border-radius:10px;overflow:hidden;background:linear-gradient(135deg,var(--g),#1D3A2D);display:grid;place-items:center;color:#fff;font-size:13px;opacity:.95}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.pr:hover .shot img{transform:scale(1.04)}
+.pr h3{font-size:26px;margin-bottom:10px}
+.pr p{color:var(--m);margin-bottom:12px}
+.pr .tg{font-size:14px;color:var(--g);font-weight:500}
+.lk{display:flex;gap:20px;flex-wrap:wrap;margin-top:6px}
+.lk a{font-weight:700;color:var(--a);text-underline-offset:4px}
+.st{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:28px 0;border-block:1px solid var(--b);margin-bottom:8px}
+.st b{display:block;font:700 clamp(36px,6vw,56px)/1 Fraunces,serif;color:var(--a)}
+.st span{font-size:14px;color:var(--m)}
+.ls{display:grid;grid-template-columns:150px 1fr;gap:6px 32px;padding:20px 0;border-top:1px solid var(--b)}
+.ls time{color:var(--g);font-weight:700;font-size:15px}
+.ls b{display:block;font-size:18px}
+.ls span{color:var(--m)}
+.ac details{border-top:1px solid var(--b)}.ac details:last-child{border-bottom:1px solid var(--b)}
+.ac summary{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 4px;cursor:pointer;list-style:none;font:700 22px Fraunces,Georgia,serif;transition:color .2s}
+.ac summary::-webkit-details-marker{display:none}
+.ac summary::after{content:"+";font:400 30px/1 Figtree,sans-serif;color:var(--a);transition:transform .3s}
+.ac summary:hover,.ac details[open] summary{color:var(--a)}
+.ac details[open] summary::after{transform:rotate(45deg)}
+.ac .bd{padding:0 4px 24px;color:var(--m);max-width:760px;animation:up .4s}
+.fl{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.fl span{padding:6px 12px;border-radius:8px;background:var(--s);color:var(--t);font-weight:600;font-size:14px}.fl span+span::before{content:"\2192";color:var(--a);margin-right:8px}
+.ac .st{border:0;padding:4px 0 20px;margin:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.k{background:var(--s);text-align:center;border-radius:24px;padding:72px 24px}
+.k h2{margin-bottom:12px}
+.k p{color:var(--m);max-width:480px;margin:0 auto 28px}
+.k .btns{justify-content:center}
+footer{padding:32px 0;text-align:center;color:var(--m);font-size:14px}
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s,transform .7s}
+.js .rv.in{opacity:1;transform:none}
+@keyframes up{from{opacity:0;transform:translateY(18px)}}
+.hero>div>*,.ph{animation:up .8s both}
+.hero>div>*:nth-child(2){animation-delay:.1s}.hero>div>*:nth-child(3){animation-delay:.2s}.hero>div>*:nth-child(4){animation-delay:.3s}.ph{animation-delay:.25s}
+@media(max-width:800px){nav a.l{display:none}.hero,.abt,.pr,.two{grid-template-columns:1fr;gap:32px}.ph{max-width:260px;order:-1}.st{grid-template-columns:1fr 1fr}.ls{grid-template-columns:1fr}section{padding:64px 0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="w"><nav>
+<a class="logo" href="#top">Camila Cortés</a>
+<a class="l" href="#sobre" data-i="n1">Sobre mí</a><a class="l" href="#proyectos" data-i="n2">Proyectos</a><a class="l" href="#caso" data-i="n3">Caso de estudio</a><a class="l" href="#experiencia" data-i="n4">Experiencia</a><a class="l" href="#contacto" data-i="n5">Contacto</a>
+<button class="ic" id="th" aria-label="Cambiar tema" title="Claro / oscuro">☾</button>
+<button class="ic" id="lg" aria-label="Change language" title="Español / English">EN</button>
+</nav></div></header>
+
+<main id="top">
+<div class="w hero">
+<div>
+<span class="tag" data-i="h0">Disponible para trabajar</span>
+<h1>Camila Cortés</h1>
+<p class="s" data-i="h1">Desarrolladora Web Full Stack con background en Diseño Gráfico. Creo sitios y aplicaciones funcionales, con foco en accesibilidad y cuidado visual, desde la identidad hasta el despliegue.</p>
+<div class="btns"><a class="btn p" href="#proyectos" data-i="h2">Ver proyectos</a><a class="btn" href="assets/CV-Camila-Cortes.pdf" data-i="h3">Descargar CV</a><a class="btn" href="https://github.com/camicorteza" target="_blank" rel="noopener">GitHub</a><a class="btn" href="https://www.linkedin.com/in/camicorteza" target="_blank" rel="noopener">LinkedIn</a></div>
+</div>
+<div class="ph" role="img" aria-label="Camila Cortés">CC<img src="assets/foto.webp" alt="Retrato de Camila Cortés" onerror="this.remove()"></div>
+</div>
+
+<section id="sobre"><div class="w abt">
+<div class="rv"><h2 data-i="a0">Diseño que funciona, código que se ve bien</h2>
+<p data-i="a1">Soy desarrolladora web y diseñadora gráfica: llevo un proyecto desde la identidad visual hasta la entrega. He desarrollado sitios reales para instituciones de la Región del Maule.</p>
+<p data-i="a2">Actualmente curso la Beca SENCE Full Stack JavaScript Trainee en Talento Digital, profundizando en React y Node.js.</p></div>
+<div class="rv"><h2 data-i="a3">Herramientas</h2>
+<ul class="sk"><li data-ic="html5">HTML5</li><li data-ic="css3">CSS3</li><li data-ic="javascript">JavaScript</li><li data-ic="react">React.js</li><li data-ic="nodejs">Node.js</li><li data-ic="express">Express</li><li data-ic="postgresql">PostgreSQL</li><li data-ic="mysql">MySQL</li><li data-ic="sequelize">Sequelize</li><li>JWT</li><li data-ic="wordpress">WordPress</li><li data-ic="git">Git</li><li data-ic="github">GitHub</li><li data-ic="docker">Docker</li><li data-ic="photoshop" data-v="plain">Photoshop</li><li data-ic="illustrator" data-v="plain">Illustrator</li></ul></div>
+</div></section>
+
+<section id="proyectos"><div class="w">
+<h2 data-i="p0">Lo que he construido</h2>
+
+<article class="pr rv">
+<div class="shot">assets/hogar.webp<img src="assets/hogar.webp" alt="Captura del sitio Hogar San Juan Apóstol" onerror="this.remove()"></div>
+<div><h3>Hogar San Juan Apóstol</h3>
+<p data-i="p1">Sitio institucional para un hogar de adultos mayores: donaciones con WooCommerce (Webpay Plus y Mercado Pago integrados, en modo de prueba), galería, portal de transparencia y código personalizado organizado y versionado en GitHub.</p>
+<p class="tg">WordPress, WooCommerce, JavaScript, CSS</p>
+<div class="lk"><a href="https://hogarsanjuanapostol.cl" target="_blank" rel="noopener" data-i="pl">Ver sitio</a><a href="https://github.com/camicorteza/hogar-san-juan-apostol-web" target="_blank" rel="noopener" data-i="pr">Ver repositorio</a></div></div>
+</article>
+
+<article class="pr rv">
+<div class="shot">assets/rotary.webp<img src="assets/rotary.webp" alt="Captura del sitio Rotary Club Talca" onerror="this.remove()"></div>
+<div><h3>Rotary Club Talca</h3>
+<p data-i="p2">Sitio institucional para el club: formularios con envío AJAX, correo transaccional con Brevo, banner de cookies y navegación personalizada.</p>
+<p class="tg">WordPress, JavaScript, AJAX, Brevo</p>
+<div class="lk"><a href="https://rotaryclubtalca.cl" target="_blank" rel="noopener" data-i="pl2">Ver sitio</a></div></div>
+</article>
+
+<article class="pr rv">
+<div class="shot">assets/alke.webp<img src="assets/alke.webp" alt="Captura de Alke Wallet" onerror="this.remove()"></div>
+<div><h3>Alke Wallet</h3>
+<p data-i="p3">Billetera digital full stack: API REST con Node.js, Express y PostgreSQL, autenticación JWT, transacciones con rollback y subida de fotos de perfil.</p>
+<p class="tg">Node.js, Express, PostgreSQL, Sequelize, JWT</p>
+<div class="lk"><a href="#caso" data-i="pc">Ver caso de estudio</a><a href="https://github.com/camicorteza/alke-wallet" target="_blank" rel="noopener" data-i="pr2">Ver repositorio</a></div></div>
+</article>
+</div></section>
+
+<section id="caso"><div class="w">
+<h2 data-i="c0">Caso de estudio: Alke Wallet</h2>
+<div class="ac rv"><details name="cs" open><summary data-i="t1">Descripción</summary><div class="bd"><p data-i="d1">Evolución de una billetera digital en HTML, CSS y jQuery (con localStorage) a una aplicación con backend propio y base de datos relacional, desarrollada en tres etapas del curso.</p></div></details><details name="cs"><summary data-i="t2">Desafío principal</summary><div class="bd"><p data-i="d2">Reemplazar localStorage por una API segura y consistente: autenticación, acceso restringido a los datos de cada usuario e integridad del saldo en cada operación.</p></div></details><details name="cs"><summary data-i="t3">Solución propuesta</summary><div class="bd"><p data-i="d3">API REST con rutas privadas protegidas por JWT, un middleware que impide modificar recursos de otros usuarios (401 y 403), operaciones de saldo dentro de transacciones SQL con rollback y subida de archivos validada por tipo y tamaño.</p><div class="fl"><span data-i="x1">Cliente</span><span>Middleware JWT</span><span data-i="x2">Controlador</span><span>Sequelize</span><span>PostgreSQL</span></div></div></details><details name="cs"><summary data-i="t4">Herramientas</summary><div class="bd"><ul class="sk"><li data-ic="nodejs">Node.js</li><li data-ic="express">Express</li><li data-ic="postgresql">PostgreSQL</li><li data-ic="sequelize">Sequelize</li><li>jsonwebtoken</li><li>bcryptjs</li><li>multer</li><li>dotenv</li><li data-ic="postman">Postman</li><li data-ic="git">Git</li></ul></div></details><details name="cs"><summary data-i="t5">Aprendizajes</summary><div class="bd"><p data-i="d5">Modelado relacional (1:1, 1:N, N:M), seguridad de una API, manejo centralizado de errores y cómo documentar las decisiones técnicas para que otras personas las entiendan.</p></div></details><details name="cs"><summary data-i="t6">Métricas de impacto</summary><div class="bd"><div class="st"><div><b>5</b><span data-i="s1">modelos de datos</span></div><div><b>3</b><span data-i="s2">tipos de relación (1:1, 1:N, N:M)</span></div><div><b>~20</b><span data-i="s3">endpoints REST</span></div><div><b>2 MB</b><span data-i="s4">máximo por archivo subido</span></div></div><p data-i="d6">Las cifras de arriba salen de la propia API. El rollback se comprobó manualmente contra la base de datos: ante un error, el saldo queda exactamente como estaba.</p></div></details><details name="cs"><summary data-i="t7">Habilidades aplicadas</summary><div class="bd"><p data-i="d7">Diseño de APIs REST, modelado de datos, autenticación y autorización, validación de datos, manejo de errores, control de versiones y documentación.</p></div></details><details name="cs"><summary data-i="t8">Por qué lo elegí</summary><div class="bd"><p data-i="d8">Reúne lo que busca un rol junior: bases de datos, buenas prácticas de diseño técnico y documentación clara. Además muestra mi paso del front-end al backend.</p></div></details></div>
+<div class="lk" style="margin-top:24px"><a href="https://github.com/camicorteza/alke-wallet" target="_blank" rel="noopener" data-i="pr3">Ver repositorio</a></div>
+</div></section>
+
+<section id="experiencia"><div class="w two">
+<div class="rv"><h2 data-i="e0">Experiencia</h2>
+<div class="ls"><time>2026</time><div><b data-i="e4">Desarrolladora Web, freelance</b><span>Hogar San Juan Apóstol, San Clemente</span><br><span data-i="e5">Proyecto de principio a fin en unos 3 meses.</span></div></div>
+<div class="ls"><time>2026</time><div><b data-i="e4">Desarrolladora Web, freelance</b><span>Rotary Club Talca, Talca</span><br><span data-i="e5">Proyecto de principio a fin en unos 3 meses.</span></div></div>
+<div class="ls"><time>2021 – 2022</time><div><b data-i="e1">Diseñadora Web</b><span>Gráfica y Tecnología SPA, Talca</span></div></div>
+<div class="ls"><time>2019 – 2020</time><div><b data-i="e2">Diseñadora Gráfica</b><span>Graphicx, Curicó</span></div></div>
+<div class="ls"><time>2021</time><div><b data-i="e3">Práctica profesional</b><span>Seremi Regional de Transportes, Talca</span></div></div></div>
+<div class="rv"><h2 data-i="f0">Formación</h2>
+<div class="ls"><time>2026</time><div><b>Full Stack JavaScript Trainee</b><span data-i="f1">Talento Digital, Beca SENCE (en curso)</span></div></div>
+<div class="ls"><time>2024 – 2025</time><div><b data-i="f2">Carrera Desarrollo Backend</b><span>Coderhouse</span></div></div>
+<div class="ls"><time>2022</time><div><b data-i="f3">Diplomado en Desarrollo Web</b><span>Duoc UC, Talca</span></div></div>
+<div class="ls"><time>2021</time><div><b data-i="f4">Diseño y Producción Gráfica</b><span>Inacap, Curicó</span></div></div>
+<div class="ls"><time>2026</time><div><b data-i="f5">Ciberseguridad y SEO para IA</b><span>Big School</span></div></div></div>
+</div></section>
+
+<section id="contacto"><div class="w"><div class="k rv">
+<h2 data-i="k0">Hablemos</h2>
+<p data-i="k1">Estoy disponible para nuevas oportunidades. Si buscas una desarrolladora con ojo para el diseño, escríbeme.</p>
+<div class="btns"><a class="btn p" href="mailto:camii.20@hotmail.es">camii.20@hotmail.es</a><a class="btn" href="https://www.linkedin.com/in/camicorteza" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="tel:+56976287963">+56 9 7628 7963</a></div>
+</div></div></section>
+</main>
+<footer>© 2026 Camila Cortés, Talca, Chile</footer>
+
+<script>
+document.documentElement.classList.add('js');
+const R=document.documentElement,E={es:{},en:{n1:'About',n2:'Projects',n3:'Case study',n4:'Experience',n5:'Contact',h0:'Available for work',h1:'Full Stack Web Developer with a Graphic Design background. I build functional sites and apps with a focus on accessibility and visual care, from identity to deployment.',h2:'View projects',h3:'Download CV',a0:'Design that works, code that looks good',a1:"I'm a web developer and graphic designer: I take a project from visual identity to delivery. I've built real sites for organizations in Chile's Maule Region.",a2:"I'm currently in the SENCE-funded Full Stack JavaScript Trainee program at Talento Digital, going deeper into React and Node.js.",a3:'Toolkit',p0:"What I've built",p1:'Institutional site for a care home for older adults: donations with WooCommerce (Webpay Plus and Mercado Pago integrated, in test mode), photo gallery, transparency portal and custom code organized and versioned on GitHub.',p2:'Institutional site for the club: AJAX forms, transactional email with Brevo, a cookie banner and custom navigation.',p3:'Full stack digital wallet: REST API with Node.js, Express and PostgreSQL, JWT authentication, transactions with rollback and profile photo uploads.',pl:'Visit site',pl2:'Visit site',pr:'View repository',pr2:'View repository',pr3:'View repository',pc:'View case study',c0:'Case study: Alke Wallet',s1:'data models',s2:'relationship types (1:1, 1:N, N:M)',s3:'REST endpoints',s4:'max size per uploaded file',t1:'Description',d1:'A digital wallet evolved from HTML, CSS and jQuery (with localStorage) into an application with its own backend and relational database, built in three stages of the course.',t2:'Main challenge',d2:'Replace localStorage with a secure, consistent API: authentication, per-user access to data and balance integrity on every operation.',t3:'Proposed solution',d3:"REST API with private routes protected by JWT, a middleware that stops users from changing other users' resources (401 and 403), balance operations inside SQL transactions with rollback, and file uploads validated by type and size.",t4:'Tools',d4:'Node.js, Express, PostgreSQL, Sequelize, jsonwebtoken, bcryptjs, multer, dotenv, Postman and Git.',t5:'Key learnings',d5:'Relational modeling (1:1, 1:N, N:M), API security, centralized error handling and how to document technical decisions so others can follow them.',t6:'Impact metrics',d6:'The figures above come from the API itself. Rollback was checked manually against the database: on error, the balance stays exactly as it was.',t7:'Skills applied',d7:'REST API design, data modeling, authentication and authorization, data validation, error handling, version control and documentation.',t8:'Why I chose it',d8:'It covers what a junior role looks for: databases, good technical design practices and clear documentation. It also shows my move from front-end to backend.',e0:'Experience',e1:'Web Designer',e2:'Graphic Designer',e3:'Professional internship',x1:'Client',x2:'Controller',e4:'Web Developer, freelance',e5:'End-to-end project in about 3 months.',f0:'Education',f1:'Talento Digital, SENCE scholarship (in progress)',f2:'Backend Development program',f3:'Web Development diploma',f4:'Graphic Design and Production',f5:'Cybersecurity and SEO for AI',k0:"Let's talk",k1:"I'm open to new opportunities. If you need a developer with an eye for design, get in touch."}};
+document.querySelectorAll('[data-i]').forEach(e=>E.es[e.dataset.i]=e.textContent);
+const get=k=>{try{return localStorage.getItem(k)}catch(e){}},put=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
+function lang(l){R.lang=l;document.querySelectorAll('[data-i]').forEach(e=>e.textContent=E[l][e.dataset.i]);lg.textContent=l=='es'?'EN':'ES';th.setAttribute('aria-label',l=='es'?'Cambiar tema':'Toggle theme');put('lang',l)}
+function theme(t){R.dataset.theme=t;th.textContent=t=='dark'?'☀':'☾';put('theme',t)}
+lg.onclick=()=>lang(R.lang=='es'?'en':'es');
+th.onclick=()=>theme(R.dataset.theme=='dark'?'light':'dark');
+theme(get('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
+if(get('lang')=='en')lang('en');
+document.querySelectorAll('.sk li[data-ic]').forEach(li=>{const s=li.dataset.ic,i=new Image(20,20);i.alt='';i.loading='lazy';i.src='https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/'+s+'/'+s+'-'+(li.dataset.v||'original')+'.svg';i.onerror=()=>i.remove();li.prepend(i)});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
