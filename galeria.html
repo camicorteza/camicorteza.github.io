@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Galería | Camila Cortés</title>
+<meta name="description" content="Galería de pinturas e ilustraciones propias de Camila Cortés.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232F6B4F'/><text x='16' y='23' font-size='18' text-anchor='middle' fill='%23F2A65A' font-family='Georgia'>C</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF6F0;--s:#F1EADF;--t:#1F2A24;--m:#58665D;--g:#2F6B4F;--a:#B8611A;--on:#fff;--b:#DDD3C2;--art:url(assets/arte/bg-light.webp)}
+[data-theme=dark]{--bg:#121412;--s:#1A1E1B;--t:#ECE8E1;--m:#9AA59C;--g:#5BB38A;--a:#F2A65A;--on:#121412;--b:#2B312C;--art:url(assets/arte/bg-dark.webp)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--t);font:17px/1.65 Figtree,system-ui,sans-serif;transition:background .3s,color .3s}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--a);outline-offset:3px;border-radius:4px}
+.w{max-width:1040px;margin:auto;padding:0 24px}
+h1,h2,h3,dt{font-family:Fraunces,Georgia,serif;font-weight:700;line-height:1.15}
+header{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--b)}
+nav{display:flex;align-items:center;gap:20px;height:64px}
+.logo{font:700 20px Fraunces,serif;text-decoration:none;margin-right:auto}
+nav a.l{font-size:15px;color:var(--m);text-decoration:none;font-weight:500}
+nav a.l:hover{color:var(--g)}
+.ic{background:none;border:1px solid var(--b);color:var(--t);border-radius:999px;height:36px;min-width:36px;padding:0 12px;font:600 13px Figtree,sans-serif;cursor:pointer}
+.ic:hover{border-color:var(--g)}
+section{padding:88px 0}
+h2{font-size:clamp(28px,4vw,40px);margin-bottom:32px}
+.hero{display:grid;grid-template-columns:1.5fr 1fr;gap:56px;align-items:center;padding:72px 0 88px}
+.hero h1{font-size:clamp(46px,8vw,88px);font-weight:700;letter-spacing:-.02em;margin-bottom:20px}
+.hero p.s{color:var(--m);font-size:19px;max-width:520px;margin-bottom:28px}
+.tag{display:inline-block;margin-bottom:18px;padding:5px 14px;border:1px solid var(--g);color:var(--g);border-radius:999px;font-size:14px;font-weight:500}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 24px;border-radius:999px;font-weight:700;text-decoration:none;font-size:15px;border:1.5px solid var(--b);transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--a);border-color:var(--a);color:var(--on)}
+.ph{position:relative;aspect-ratio:4/5;border-radius:999px 999px 24px 24px;background:var(--g);display:grid;place-items:center;font:700 64px Fraunces,serif;color:var(--on);margin:0 0 0 14px}
+.ph::before{content:"";position:absolute;inset:14px -14px -14px 14px;border-radius:inherit;background:var(--a);z-index:-1}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit}
+.abt{display:grid;grid-template-columns:1.2fr 1fr;gap:56px}
+.abt p{color:var(--m);margin-bottom:14px}
+.sk{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}
+.sk li{display:flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid var(--b);border-radius:8px;font-size:15px;font-weight:500}
+.sk img{width:20px;height:20px}
+[data-theme=dark] .sk img[src*="/express/"],[data-theme=dark] .sk img[src*="/github/"]{filter:invert(1)}
+.pr{display:grid;grid-template-columns:5fr 6fr;gap:36px;padding:40px 0;border-top:1px solid var(--b)}
+.shot{position:relative;aspect-ratio:16/10;border-radius:10px;overflow:hidden;background:linear-gradient(135deg,var(--g),#1D3A2D);display:grid;place-items:center;color:#fff;font-size:13px;opacity:.95}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.pr:hover .shot img{transform:scale(1.04)}
+.pr h3{font-size:26px;margin-bottom:10px}
+.pr p{color:var(--m);margin-bottom:12px}
+.pr .tg{font-size:14px;color:var(--g);font-weight:500}
+.lk{display:flex;gap:20px;flex-wrap:wrap;margin-top:6px}
+.lk a{font-weight:700;color:var(--a);text-underline-offset:4px}
+.st{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:28px 0;border-block:1px solid var(--b);margin-bottom:8px}
+.st b{display:block;font:700 clamp(36px,6vw,56px)/1 Fraunces,serif;color:var(--a)}
+.st span{font-size:14px;color:var(--m)}
+.ls{display:grid;grid-template-columns:150px 1fr;gap:6px 32px;padding:20px 0;border-top:1px solid var(--b)}
+.ls time{color:var(--g);font-weight:700;font-size:15px}
+.ls b{display:block;font-size:18px}
+.ls span{color:var(--m)}
+.ac details{border-top:1px solid var(--b)}.ac details:last-child{border-bottom:1px solid var(--b)}
+.ac summary{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 4px;cursor:pointer;list-style:none;font:700 22px Fraunces,Georgia,serif;transition:color .2s}
+.ac summary::-webkit-details-marker{display:none}
+.ac summary::after{content:"+";font:400 30px/1 Figtree,sans-serif;color:var(--a);transition:transform .3s}
+.ac summary:hover,.ac details[open] summary{color:var(--a)}
+.ac details[open] summary::after{transform:rotate(45deg)}
+.ac .bd{padding:0 4px 24px;color:var(--m);max-width:760px;animation:up .4s}
+.fl{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.fl span{padding:6px 12px;border-radius:8px;background:var(--s);color:var(--t);font-weight:600;font-size:14px}.fl span+span::before{content:"\2192";color:var(--a);margin-right:8px}
+.ac .st{border:0;padding:4px 0 20px;margin:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.k{background:var(--s);text-align:center;border-radius:24px;padding:72px 24px;position:relative;overflow:hidden}.k::before{content:"";position:absolute;inset:0;background:var(--art) center/cover;opacity:.3}.k>*{position:relative}
+.k h2{margin-bottom:12px}
+.k p{color:var(--m);max-width:480px;margin:0 auto 28px}
+.k .btns{justify-content:center}
+footer{padding:32px 0;text-align:center;color:var(--m);font-size:14px}
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s,transform .7s}
+.js .rv.in{opacity:1;transform:none}
+@keyframes up{from{opacity:0;transform:translateY(18px)}}
+.hero>div>*,.ph{animation:up .8s both}
+.hero>div>*:nth-child(2){animation-delay:.1s}.hero>div>*:nth-child(3){animation-delay:.2s}.hero>div>*:nth-child(4){animation-delay:.3s}.ph{animation-delay:.25s}
+.shot.dk{background:#000}.shot video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.shot.dk img{object-fit:contain}
+.gal{columns:3;column-gap:8px}.gal a{display:block;margin-bottom:8px;break-inside:avoid}.gal img{width:100%;display:block;border-radius:6px;border:1px solid var(--b);transition:transform .3s}.gal a:hover img{transform:translateY(-3px)}
+.gi{color:var(--m);max-width:640px;margin:-12px 0 8px}
+.as{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.as a{display:block;overflow:hidden;border-radius:12px;border:1px solid var(--b)}.as img{display:block;width:100%;aspect-ratio:1;object-fit:cover;transition:transform .5s}.as a:hover img{transform:scale(1.05)}
+@media(max-width:800px){nav a.l{display:none}.hero,.abt,.pr,.two{grid-template-columns:1fr;gap:32px}.ph{max-width:260px;order:-1}.st{grid-template-columns:1fr 1fr}.ls{grid-template-columns:1fr}section{padding:64px 0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+.gh{position:relative;overflow:hidden;padding:80px 0 56px;border-bottom:1px solid var(--b)}.gh::before{content:"";position:absolute;inset:0;background:var(--art) center/cover;opacity:.3}.gh .w{position:relative}
+.gh h1{font-size:clamp(42px,8vw,80px);letter-spacing:-.02em;margin-bottom:14px}.gh p{color:var(--m);max-width:620px;font-size:18px}
+.gs{padding:64px 0 0}.gs h2{margin-bottom:6px}.gs>.w>p{color:var(--m);margin-bottom:24px;max-width:640px}
+.ent{display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:center}
+.ent img,.mas img,.par img{width:100%;display:block;border-radius:12px;border:1px solid var(--b);cursor:zoom-in}
+.mas{columns:4;column-gap:14px}.mas figure,.par figure{break-inside:avoid;margin:0 0 14px}.mas img{transition:transform .4s}.mas figure:hover img{transform:translateY(-3px)}
+.par{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}.par figure{margin:0}.par img{aspect-ratio:4/5;object-fit:cover}
+figcaption{font-size:14px;color:var(--m);padding:8px 2px 0}figcaption b{display:block;color:var(--t);font:700 17px Fraunces,Georgia,serif}
+.ent h2{font-size:clamp(30px,4.4vw,46px)}.ent p{color:var(--m)}
+.ig{padding-top:56px;padding-bottom:72px}.ig a{font-weight:700;color:var(--a);text-underline-offset:4px}
+dialog{margin:auto;border:0;padding:0;background:transparent;max-width:96vw;max-height:96vh;overflow:visible}dialog::backdrop{background:rgba(8,10,9,.9)}
+.lb{display:grid;gap:12px;justify-items:center}.lb img{max-width:90vw;max-height:80vh;object-fit:contain;border-radius:8px}.lb p{margin:0;color:#ECE8E1;text-align:center}
+.lbb{position:fixed;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid #ffffff55;background:#0008;color:#fff;font-size:24px;cursor:pointer}.lbb:hover{background:#000b}
+.lbp{left:14px}.lbn{right:14px}.lbx{top:16px;right:16px;transform:none}
+@media(max-width:800px){.ent,.par{grid-template-columns:1fr}.mas{columns:2}.lbp{left:6px}.lbn{right:6px}}
+</style>
+</head>
+<body>
+<header><div class="w"><nav>
+<a class="logo" href="index.html">Camila Cortés</a>
+<a class="l" href="index.html" data-i="gb">Volver al portafolio</a>
+<button class="ic" id="th" aria-label="Cambiar tema" title="Claro / oscuro">☾</button>
+<button class="ic" id="lg" aria-label="Change language" title="Español / English">EN</button>
+</nav></div></header>
+<main>
+<div class="gh"><div class="w"><h1 data-i="gh1">Galería</h1><p data-i="gh2">Pinturas e ilustraciones propias, creadas entre 2018 y 2020. Contornos marcados, color saturado y criaturas híbridas que mezclan animales, plantas y personas.</p></div></div>
+<section class="gs"><div class="w ent rv">
+<figure style="margin:0"><img src="assets/arte/salvajemente-fragil.webp" data-full="assets/arte/salvajemente-fragil.webp" alt="Salvajemente frágil: pintura de un rostro mitad gato y mitad mariposa entre hojas y flores"><figcaption style="display:none"><b>Salvajemente frágil</b><span data-i="tp">Pintura</span> · 2019</figcaption></figure>
+<div><h2>Salvajemente frágil</h2><p><span data-i="tp">Pintura</span> · 2019</p><p data-i="en1">Obra de entrada a la galería: un rostro dividido entre el gato y la mariposa, rodeado de hojas y flores.</p></div>
+</div></section>
+<section class="gs"><div class="w rv"><h2 data-i="s1">Pintura</h2><div class="mas">
+<figure><img src="assets/arte/descender-de-la-oscuridad-t.webp" data-full="assets/arte/descender-de-la-oscuridad.webp" alt="Pintura de un dragón verde enroscado en un cielo negro, rodeado de luciérnagas" loading="lazy"><figcaption><b>Descender de la oscuridad</b><span data-i="tp">Pintura</span> · 2020</figcaption></figure><figure><img src="assets/arte/entre-la-vida-y-la-muerte-t.webp" data-full="assets/arte/entre-la-vida-y-la-muerte.webp" alt="Pintura de un corazón y un cráneo unidos, con un pájaro, hojas y una serpiente" loading="lazy"><figcaption><b>Entre la vida y la muerte</b><span data-i="tp">Pintura</span> · 2019</figcaption></figure><figure><img src="assets/arte/nunca-te-dejes-dominar-t.webp" data-full="assets/arte/nunca-te-dejes-dominar.webp" alt="Pintura de un elefante, un guepardo y un águila superpuestos sobre un fondo rojo" loading="lazy"><figcaption><b>Nunca te dejes dominar</b><span data-i="tp">Pintura</span> · 2019</figcaption></figure><figure><img src="assets/arte/siempre-viven-nunca-mueren-t.webp" data-full="assets/arte/siempre-viven-nunca-mueren.webp" alt="Pintura de un ciervo con un árbol de mariposas sobre la cabeza y plantas carnívoras" loading="lazy"><figcaption><b>Siempre viven nunca mueren</b><span data-i="tp">Pintura</span> · 2020</figcaption></figure>
+</div></div></section>
+<section class="gs"><div class="w rv"><h2 data-i="s2">De la pintura al vector</h2><p data-i="s2d">La misma composición, primero pintada (marzo de 2020) y luego recreada en digital (agosto de 2020).</p>
+<div class="par">
+<figure><img src="assets/arte/te-crees-senor-de-todo-territorio-t.webp" data-full="assets/arte/te-crees-senor-de-todo-territorio.webp" alt="Te crees señor de todo territorio: pintura de un león con una serpiente y una figura humana sobre un cielo azul estrellado" loading="lazy"><figcaption><b>Te crees señor de todo territorio</b><span data-i="tp">Pintura</span> · 2020</figcaption></figure>
+<figure><img src="assets/arte/tu-me-dices-cuando-t.webp" data-full="assets/arte/tu-me-dices-cuando.webp" alt="Tú me dices cuándo: ilustración digital de una mujer con carcaj detrás de un león y una serpiente" loading="lazy"><figcaption><b>Tú me dices cuándo</b><span data-i="ti">Ilustración digital</span> · 2020</figcaption></figure>
+</div></div></section>
+<section class="gs"><div class="w rv"><h2 data-i="s3">Ilustración digital</h2><div class="mas" style="columns:3">
+<figure><img src="assets/arte/ciclo-de-la-vida-t.webp" data-full="assets/arte/ciclo-de-la-vida.webp" alt="Ilustración digital de un reloj de arena con un árbol, una ola y una luna" loading="lazy"><figcaption><b>Ciclo de la vida</b><span data-i="ti">Ilustración digital</span> · 2018</figcaption></figure><figure><img src="assets/arte/mi-rostro-florece-t.webp" data-full="assets/arte/mi-rostro-florece.webp" alt="Ilustración digital de un perfil femenino con ala de mariposa, loto y girasol" loading="lazy"><figcaption><b>Mi rostro florece</b><span data-i="ti">Ilustración digital</span> · 2018</figcaption></figure><figure><img src="assets/arte/en-busqueda-t.webp" data-full="assets/arte/en-busqueda.webp" alt="Ilustración digital de un auto rojo clásico, un semáforo y una flor de cactus frente a un sol" loading="lazy"><figcaption><b>En búsqueda</b><span data-i="ti">Ilustración digital</span> · 2019</figcaption></figure>
+</div></div></section>
+<div class="w ig"><a href="https://www.instagram.com/cort3za/" target="_blank" rel="noopener">Instagram @cort3za</a></div>
+</main>
+<dialog id="lb" aria-label="Obra ampliada"><div class="lb"><img id="lbi" alt=""><p id="lbc"></p></div><button class="lbb lbx" id="lbx" aria-label="Cerrar">✕</button><button class="lbb lbp" id="lbp" aria-label="Anterior">‹</button><button class="lbb lbn" id="lbn" aria-label="Siguiente">›</button></dialog>
+<footer>© 2026 Camila Cortés, Talca, Chile</footer>
+<script>
+document.documentElement.classList.add('js');
+const R=document.documentElement,E={es:{},en:{gb:'Back to portfolio',gh1:'Gallery',gh2:'Original paintings and illustrations created between 2018 and 2020. Bold outlines, saturated color and hybrid creatures that blend animals, plants and people.',tp:'Painting',ti:'Digital illustration',s1:'Painting',s2:'From painting to vector',s2d:'The same composition, first painted (March 2020) and then recreated digitally (August 2020).',en1:'The opening piece of the gallery: a face split between a cat and a butterfly, surrounded by leaves and flowers.'}};
+document.querySelectorAll('[data-i]').forEach(e=>E.es[e.dataset.i]=e.textContent);
+const get=k=>{try{return localStorage.getItem(k)}catch(e){}},put=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
+function lang(l){R.lang=l;document.querySelectorAll('[data-i]').forEach(e=>e.textContent=E[l][e.dataset.i]);lg.textContent=l=='es'?'EN':'ES';th.setAttribute('aria-label',l=='es'?'Cambiar tema':'Toggle theme');put('lang',l)}
+function theme(t){R.dataset.theme=t;th.textContent=t=='dark'?'☀':'☾';put('theme',t)}
+lg.onclick=()=>lang(R.lang=='es'?'en':'es');th.onclick=()=>theme(R.dataset.theme=='dark'?'light':'dark');
+theme(get('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));if(get('lang')=='en')lang('en');
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.08});document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+const imgs=[...document.querySelectorAll('img[data-full]')];let cur=0;
+function show(i){cur=(i+imgs.length)%imgs.length;const im=imgs[cur];lbi.src=im.dataset.full;lbi.alt=im.alt;const c=im.closest('figure').querySelector('figcaption');const t=c.querySelector('b').textContent;lbc.textContent=t+' — '+c.textContent.slice(t.length)}
+imgs.forEach((im,i)=>{im.tabIndex=0;im.setAttribute('role','button');const o=()=>{show(i);lb.showModal()};im.onclick=o;im.onkeydown=e=>{if(e.key=='Enter'||e.key==' '){e.preventDefault();o()}}});
+lbx.onclick=()=>lb.close();lbp.onclick=()=>show(cur-1);lbn.onclick=()=>show(cur+1);lb.onclick=e=>{if(e.target===lb)lb.close()};
+document.addEventListener('keydown',e=>{if(!lb.open)return;if(e.key=='ArrowLeft')show(cur-1);if(e.key=='ArrowRight')show(cur+1)});
+</script>
+</body>
+</html>
